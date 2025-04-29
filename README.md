@@ -1,8 +1,8 @@
-# Generate Deprecated Ingress API for 1.22
+# Cloud Platform Delete Old Snapshots
 
 [![Ministry of Justice Repository Compliance Badge](https://github-community.service.justice.gov.uk/repository-standards/api/cloud-platform-delete-oldsnapshots/badge)](https://github-community.service.justice.gov.uk/repository-standards/cloud-platform-delete-oldsnapshots)
 
-This project deletes snapshots older than 1 year, in AWS account = "754256621582".
+This project deletes snapshots older than 1 year, in the Cloud Platform AWS account.
 
 ## How to run
 
@@ -17,3 +17,17 @@ Then you can run:
 ```bash
 go run delete-oldsnapshots.go
 ```
+
+## Testing
+
+There is a limited test suite available to run manually use the following:
+
+```bash
+go test
+```
+
+This is also run on every pull request.
+
+## Releasing
+
+To release a new image create a new release bumping the version number. You can then reference this tag in the [delete-old-snapshots](https://github.com/ministryofjustice/cloud-platform-terraform-concourse/blob/main/pipelines/manager/main/delete-oldsnapshots.yaml) pipeline.
