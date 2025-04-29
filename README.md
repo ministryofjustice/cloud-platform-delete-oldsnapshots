@@ -18,6 +18,16 @@ Then you can run:
 go run delete-oldsnapshots.go
 ```
 
+## Testing
+
+There is a limited test suite available to run manually use the following:
+
+```bash
+go test
+```
+
+This is also run on every pull request.
+
 ## Releasing
 
 To release a new image create a new release bumping the version number. You can then reference this tag in the [delete-old-snapshots](https://github.com/ministryofjustice/cloud-platform-terraform-concourse/blob/main/pipelines/manager/main/delete-oldsnapshots.yaml) pipeline.
